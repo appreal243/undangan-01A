@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Bree+Serif&family=Great+Vibes&family=Playball&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+/* 
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Playball", cursive;
+  font-family: "Crimson Pro", serif;
+  font-family: "Great Vibes", cursive; 
+  font-family: "Bree Serif", serif;
+  */
+
+:root {
+  --bg-color: #000000;
+  --bg-second-color: #212529;
+  --main-color: #d4aa6e;
+  --text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-second-color);
+}
+
+section {
+  background-image: url("../img/Demo-f08-a-1.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-color: var(--bg-color);
+  width: 36rem;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+section > div {
+  width: auto;
+  height: 100vh;
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section > img {
+  width: 24rem;
+  position: absolute;
+  z-index: 2;
+}
+
+section > img:nth-of-type(1) {
+  animation: spinKanan 20s linear infinite;
+  top: -12rem;
+  left: -12rem;
+}
+
+section > img:nth-of-type(2) {
+  animation: spinKiri 20s linear infinite;
+  top: -12rem;
+  right: -12rem;
+}
+
+section > img:nth-of-type(3) {
+  animation: spinKanan 20s linear infinite;
+  bottom: -12rem;
+  left: -12rem;
+}
+
+section > img:nth-of-type(4) {
+  animation: spinKiri 20s linear infinite;
+  bottom: -12rem;
+  right: -12rem;
+}
+
+/* CSS Halaman 1 */
+section.page1 {
+  position: fixed;
+  z-index: 99;
+  transition: 2s ease-out;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.page1-content h5 {
+  font-size: 1.6rem;
+  font-family: "Crimson Pro", serif;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+  animation: swipeDown 1s ease-in-out forwards;
+  position: relative;
+  opacity: 0;
+}
+
+.page1-content h1 {
+  font-size: 6.4rem;
+  font-family: "Great Vibes", cursive;
+  color: var(--main-color);
+  animation: zoomOut 1s ease-in-out;
+}
+
+.page1-content h1:nth-of-type(1) {
+  margin-left: -5rem;
+}
+
+.page1-content h1:nth-of-type(2) {
+  margin-right: -5rem;
+}
+
+.page1-content h4 {
+  font-family: "Great Vibes", cursive;
+  color: var(--main-color);
+  font-size: 2.8rem;
+  animation: zoomOut 1s ease-in-out;
+}
+
+.page1-content h6 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  animation: zoomOut 1s ease-in-out;
+}
+
+.page1-content h3 {
+  font-size: 2.6rem;
+  margin: 2rem auto;
+  font-family: "Crimson Pro", serif;
+  animation: swipeUp 1s ease-in-out forwards;
+  position: relative;
+  opacity: 0;
+}
+
+.page1-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: zoomOut 1s ease-in-out;
+}
+
+.page1-content a {
+  font-size: 1.5rem;
+  font-family: "Playfair Display SC", serif;
+  color: var(--text-color);
+  background: var(--main-color);
+  padding: 0.8rem 1.8rem;
+  border-radius: 15px;
+  animation: zoomOut 1s ease-in-out;
+}
+/* CSS Halaman 1 End */
+
+/* CSS Halaman 2 */
+.page2-content h5 {
+  font-size: 1.6rem;
+  font-family: "Crimson Pro", serif;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.page2-content h1 {
+  font-size: 6.4rem;
+  font-family: "Great Vibes", cursive;
+  color: var(--main-color);
+}
+
+.page2-content h1:nth-of-type(1) {
+  margin-left: -5rem;
+}
+
+.page2-content h1:nth-of-type(2) {
+  margin-right: -5rem;
+}
+
+.page2-content h4 {
+  font-family: "Great Vibes", cursive;
+  color: var(--main-color);
+  font-size: 2.8rem;
+}
+
+.page2-content > h3 {
+  font-size: 2.4rem;
+  margin: 2rem auto;
+  color: var(--main-color);
+  margin-top: 5rem;
+}
+
+.page2-content .page2-date {
+  display: flex;
+  gap: 2rem;
+  color: var(--main-color);
+}
+
+.page2-content .page2-date div {
+  text-align: center;
+  width: 5rem;
+}
+
+.page2-content .page2-date > div h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+}
+
+.page2-content .page2-date > div h5 {
+  font-size: 1.8rem;
+}
+/* CSS Halaman 2 End */
+
+/* CSS Halaman 3 */
+.page3-content > img {
+  width: 15rem;
+  margin-bottom: 1rem;
+  /* animation: swipeDown 1.5s ease-in-out forwards;
+  position: relative;
+  opacity: 0; */
+}
+
+.page3-content h5 {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  font-weight: 700;
+  /* animation: zoomOut 1s ease-in-out; */
+}
+
+.page3-content p {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--main-color);
+  margin-bottom: 3rem;
+  /* animation: zoomOut 1s ease-in-out; */
+}
+
+.page3-content .content-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.page3-content .content-img > img:nth-of-type(1),
+.page3-content .content-img > img:nth-of-type(3) {
+  width: 10rem;
+  border: 2px solid transparent;
+  outline: 2px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.page3-content .content-img > img:nth-of-type(2) {
+  width: 7rem;
+  animation: spinKanan 23s linear infinite;
+  /* animation: zoomOut 1s ease-in-out; */
+}
+
+.page3-content h4 {
+  font-size: 2.8rem;
+  color: var(--main-color);
+  font-family: "Great Vibes", cursive;
+}
+
+.page3-content h6 {
+  font-size: 1.6rem;
+  font-family: "Crimson Pro", serif;
+}
+
+.page3-content h4:nth-of-type(2) {
+  position: relative;
+  padding: 0 4rem;
+  color: white;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.6rem;
+  color: var(--main-color);
+  margin: 2rem auto;
+}
+
+.page3-content h4:nth-of-type(2)::before,
+.page3-content h4:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 70px; /* Panjang garis */
+  height: 1.5px; /* Ketebalan garis */
+  background: var(--main-color);
+}
+
+.page3-content h4:nth-of-type(2)::before {
+  left: -60px; /* Jarak dari kotak */
+  transform: translateY(-50%);
+}
+
+.page3-content h4:nth-of-type(2)::after {
+  right: -60px; /* Jarak dari kotak */
+  transform: translateY(-50%);
+}
+/* CSS Halaman 3 */
+
+/* CSS Halaman 4 & Halaman 5 */
+section > div {
+  position: relative;
+  z-index: 3;
+}
+
+.page4-content img,
+.page5-content img {
+  width: 20rem;
+  border-width: 0.8rem 0.8rem 3rem;
+  border-color: var(--text-color);
+  border-style: solid;
+  transform: rotate(3deg);
+  margin-bottom: 2rem;
+}
+
+.page4-content h2,
+.page5-content h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 4.3rem;
+  color: var(--main-color);
+}
+
+.page4-content .page4-tanggal,
+.page5-content .page5-tanggal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.page4-tanggal h4,
+.page5-tanggal h4 {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--main-color);
+  padding: 0.3rem 1.5rem;
+  display: flex;
+  width: 9rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.page4-tanggal h5,
+.page5-tanggal h5 {
+  background: var(--main-color);
+  width: 7rem;
+  height: 6rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  line-height: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.page4-tanggal h5 span,
+.page5-tanggal h5 span {
+  font-size: 2.9rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.page4-content h6,
+.page5-content h6 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.page4-content > h5,
+.page5-content > h5 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin: 1rem auto;
+}
+
+.page4-content a,
+.page5-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--main-color);
+  margin-top: 2rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 10px;
+}
+
+/* CSS Halaman 4 & Halaman 5 End */
+
+/* Halaman 6 */
+section.page6 {
+  height: auto;
+  padding: 10rem 0;
+}
+
+.page6 h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.2rem;
+  color: var(--main-color);
+  margin-bottom: 3rem;
+}
+
+.page6 .page6-content {
+  height: 100%;
+}
+
+.page6-content .page6-img {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 1rem;
+}
+
+.img-container {
+  width: 100%; /* Sesuaikan ukuran container */
+  height: 13rem; /* Sesuaikan ukuran container */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid var(--main-color);
+  /* outline: 1px solid var(--main-color); */
+  position: relative;
+  cursor: pointer;
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.img-container:hover::after {
+  opacity: 0.6;
+}
+
+.img-container img {
+  height: 100%;
+  transform: translateX(-25px);
+  transition: 0.4s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.03) translateX(-25px);
+}
+/* Halaman 6 End */
+
+/* Halaman 7 */
+.page7-content h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.2rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.page7-content > p {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page7-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Baris pertama memiliki dua kolom */
+  grid-template-rows: auto auto; /* Dua baris otomatis berdasarkan konten */
+  gap: 10px; /* Jarak antara grid items */
+  width: 100%;
+}
+
+.page7-card > div:nth-of-type(3) {
+  grid-column: span 2;
+  margin-bottom: 3rem;
+}
+
+.page7-card > div {
+  width: 100%;
+  height: auto;
+  background-color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.page7-content .page7-card img {
+  width: 8rem;
+  margin-bottom: 1rem;
+}
+
+.page7-card div:nth-of-type(3) p {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page7-card div h6 {
+  color: var(--bg-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Bree Serif", serif;
+  text-align: center;
+}
+
+.page7-card div a {
+  font-size: 1rem;
+  font-family: "Bree Serif", serif;
+  color: var(--text-color);
+  background: var(--main-color);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Halaman 7 End */
+
+/* Halaman 8 */
+.page8-content h6 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+}
+
+.page8-content h6 span {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  font-weight: 700;
+  display: block;
+  margin: 3rem 0 5rem;
+}
+/* Halaman 8 End */
+
+/* Halaman 9 */
+.page9-content h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.page9-content .page9-card {
+  width: 100%;
+  background-color: var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.page9-card h5 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.page9-card input {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 85%;
+  height: 3rem;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+.page9-card textarea {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 7rem;
+  width: 85%;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.page9-card select {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 3rem;
+  width: 85%;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.page9-card button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  width: 85%;
+  height: 3rem;
+  color: var(--text-color);
+  background: var(--main-color);
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page9-content p {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page9-content h6 {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.8rem;
+  color: var(--main-color);
+}
+/* Halaman 9 End */
+
+/* ANIMATION KEYFRAMES */
+/* Animasi spin */
+@keyframes spinKanan {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinKiri {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Animasi Zoom */
+@keyframes zoomOut {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Animasi */
+@keyframes swipeUp {
+  from {
+    bottom: -5rem;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes swipeDown {
+  from {
+    top: -5rem;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
